@@ -37,7 +37,7 @@ export function HeroSection() {
           </span>
         </h1>
         <p className="mt-6 max-w-2xl text-balance text-sm leading-relaxed text-white/90 sm:text-base md:mt-8">
-          영어를 가르치지 않습니다. {"'"}언어의 설계도{"'"}를 가르칩니다.</p>
+          영어를 가르치지 않습니다. {"'"}언어의 설계도{"'"}를 가르칩니까.</p>
         
         <p className="mt-6 max-w-2xl text-balance text-sm leading-relaxed text-white/90 sm:text-base md:mt-8">
           영문학 전공자가 아닙니다. 미국 현지 8년, 진짜 언어학자(Linguist)의 격이 다른 지도.<br />
