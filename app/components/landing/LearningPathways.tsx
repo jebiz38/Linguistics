@@ -1,67 +1,92 @@
-/* 러닝 경로: 미니멀 테이블 + 하단 박스 노트(디스클레이머) */
-const ROWS = [
-  { level: "Foundational", focus: "Pronunciation clarity & core syntax patterns", duration: "8–10 weeks" },
-  { level: "Intermediate", focus: "Fluency strategies & discourse structure", duration: "10–12 weeks" },
-  { level: "Advanced", focus: "Nuanced meaning, register, and academic style", duration: "12+ weeks" },
-  { level: "Specialized", focus: "Exam / research / professional focus areas", duration: "Custom" },
-] as const;
+import type { ReactNode } from "react";
+import { BookOpen, Headphones, PenLine, SpellCheck } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { ELEMENTARY, PROGRAMS } from "@/app/content/britannica";
+
+const AREA_ICONS: LucideIcon[] = [SpellCheck, BookOpen, PenLine, Headphones];
+
+function ProgramCard({
+  grades,
+  title,
+  children,
+}: {
+  grades: string;
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <article className="rounded-2xl border border-slate-100 bg-white p-6 shadow-md shadow-slate-900/5 sm:p-8">
+      <p className="text-xs font-semibold uppercase tracking-wider text-gold">{grades}</p>
+      <h3 className="mt-2 text-xl font-bold text-navy sm:text-2xl">{title}</h3>
+      <div className="mt-5">{children}</div>
+    </article>
+  );
+}
 
 export function LearningPathways() {
   return (
     <section
-      id="analysis"
-      className="scroll-mt-8 bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
-      aria-labelledby="pathways-heading"
+      id="programs"
+      className="scroll-mt-8 bg-slate-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      aria-labelledby="programs-heading"
     >
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-6xl">
         <h2
-          id="pathways-heading"
+          id="programs-heading"
           className="text-balance text-center text-3xl font-bold text-navy sm:text-4xl"
         >
-          <span className="block">Structured Learning</span>
-          <span className="mt-1 block text-gold sm:mt-2">Pathways</span>
+          수업 프로그램
         </h2>
-        <div className="mt-10 overflow-x-auto sm:mt-12">
-          <table className="w-full min-w-[320px] border-collapse text-left text-sm sm:text-base">
-            <caption className="sr-only">Learning levels, focus, and duration</caption>
-            <thead>
-              <tr className="border-b border-slate-200 text-sm sm:text-base">
-                <th scope="col" className="pb-4 pr-4 font-bold text-navy sm:pr-6">
-                  Level
-                </th>
-                <th scope="col" className="pb-4 pr-4 font-normal text-slate-600 sm:pr-6">
-                  Focus Area
-                </th>
-                <th scope="col" className="pb-4 font-normal text-slate-400">
-                  Duration
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {ROWS.map((r) => (
-                <tr key={r.level} className="border-b border-slate-100 last:border-0">
-                  <th
-                    scope="row"
-                    className="whitespace-nowrap py-4 pr-4 font-bold text-navy sm:pr-6"
+
+        <div className="mt-12 space-y-10 sm:mt-14 sm:space-y-12">
+          {/* 초1 ~ 초3 */}
+          <ProgramCard grades={ELEMENTARY.grades} title={ELEMENTARY.title}>
+            <p className="text-pretty text-sm leading-relaxed text-slate-600 sm:text-[15px]">
+              {ELEMENTARY.intro}
+            </p>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+              {ELEMENTARY.areas.map(({ title, text }, i) => {
+                const Icon = AREA_ICONS[i] ?? BookOpen;
+                return (
+                  <li
+                    key={title}
+                    className="flex gap-3 rounded-xl border border-slate-100 bg-slate-50/80 p-4"
                   >
-                    {r.level}
-                  </th>
-                  <td className="py-4 pr-4 text-slate-600 sm:pr-6">
-                    {r.focus}
-                  </td>
-                  <td className="whitespace-nowrap py-4 text-slate-400">
-                    {r.duration}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                    <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-navy">
+                      <Icon className="h-5 w-5 text-gold" strokeWidth={1.75} aria-hidden />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-navy">{title}</h4>
+                      <p className="mt-1 text-pretty text-sm leading-relaxed text-slate-600">
+                        {text}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </ProgramCard>
+
+          {/* 초4~6, 초5~6, 중1~고3 */}
+          {PROGRAMS.map((program) => (
+            <ProgramCard key={program.id} grades={program.grades} title={program.title}>
+              <ul className="flex flex-col gap-3">
+                {program.points.map((point) => (
+                  <li
+                    key={point.slice(0, 24)}
+                    className="flex gap-2 text-pretty text-sm leading-relaxed text-slate-600 sm:text-[15px]"
+                  >
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+                      aria-hidden
+                    />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </ProgramCard>
+          ))}
         </div>
-        <p className="mt-8 rounded-2xl bg-slate-50 p-4 text-pretty text-sm leading-relaxed text-slate-500 sm:p-5 sm:text-[15px]">
-          Durations are estimates. Placement and pacing depend on your baseline, goals, and
-          available study time. We will adjust the schedule after a short diagnostic
-          session.
-        </p>
       </div>
     </section>
   );

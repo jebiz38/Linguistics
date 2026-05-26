@@ -1,7 +1,7 @@
 import { HeroSection } from "./components/landing/HeroSection";
 import { AcademicCredentials } from "./components/landing/AcademicCredentials";
-import { ThreePillars } from "./components/landing/ThreePillars";
 import { LearningPathways } from "./components/landing/LearningPathways";
+import { ClassSchedule } from "./components/landing/ClassSchedule";
 import { FinalCtaFooter } from "./components/landing/FinalCtaFooter";
 
 export default function Home() {
@@ -9,8 +9,8 @@ export default function Home() {
     <main>
       <HeroSection />
       <AcademicCredentials />
-      <ThreePillars />
       <LearningPathways />
+      <ClassSchedule />
       <FinalCtaFooter />
     </main>
   );

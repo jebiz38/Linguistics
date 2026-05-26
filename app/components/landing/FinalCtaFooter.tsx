@@ -1,49 +1,50 @@
-import Link from "next/link";
-
-/* 최종 CTA(골드 버튼) + 3열 연락처 + 저작권(디자인: 네이비 풀폭) */
-const CONTACT = {
-  email: { label: "EMAIL", value: "hello@scilang.academy" },
-  phone: { label: "PHONE", value: "+1 (555) 000-0000" },
-  location: { label: "LOCATION", value: "Seoul / Online (KST + Online)" },
-} as const;
+import { BRAND } from "@/app/content/britannica";
 
 export function FinalCtaFooter() {
   return (
-    <footer className="bg-navy text-white">
+    <footer id="contact" className="scroll-mt-8 bg-navy-deep text-white">
       <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
         <h2 className="text-balance text-3xl font-bold sm:text-4xl">
-          <span className="block">Ready to unlock the</span>
-          <span className="mt-1 block text-gold sm:mt-2">science of language?</span>
+          <span className="block">상담 및 수강 문의</span>
+          <span className="mt-1 block text-gold sm:mt-2">{BRAND.name}</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-balance text-sm leading-relaxed text-white/80 sm:mt-8 sm:text-base">
-          Book a short call to share your goals, discuss placement, and receive a
-          personalized plan — without generic templates or one-size-fits-all drills.
+        <p className="mx-auto mt-6 max-w-2xl text-balance text-sm leading-relaxed text-white/80 sm:text-base">
+          소그룹 맞춤 배치 · 레벨 진단 후 수업을 안내합니다.
+          <br />
+          전화 또는 문자로 편하게 문의해 주세요.
         </p>
-        <Link
-          href="mailto:hello@scilang.academy?subject=Consultation"
-          className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-gold px-8 text-sm font-semibold text-navy transition hover:bg-gold/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:mt-10 sm:h-14 sm:px-10"
+        <a
+          href={BRAND.phoneHref}
+          className="mt-8 inline-flex h-14 items-center justify-center rounded-full bg-gold px-10 text-base font-semibold text-navy transition hover:bg-gold/90"
         >
-          Schedule Consultation
-        </Link>
+          {BRAND.phone}
+        </a>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 md:gap-8 md:py-16 lg:px-8">
-          {(Object.values(CONTACT) as { label: string; value: string }[]).map(
-            (item) => (
-              <div key={item.label} className="text-center">
-                <p className="text-xs font-semibold uppercase tracking-wider text-gold">
-                  {item.label}
-                </p>
-                <p className="mt-2 break-words text-sm text-white sm:text-base">
-                  {item.value}
-                </p>
-              </div>
-            ),
-          )}
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:gap-8 md:py-16 lg:px-8">
+          <div className="text-center md:text-right">
+            <p className="text-xs font-semibold uppercase tracking-wider text-gold">
+              전화
+            </p>
+            <a
+              href={BRAND.phoneHref}
+              className="mt-2 block text-lg font-semibold text-white hover:text-gold"
+            >
+              {BRAND.phone}
+            </a>
+          </div>
+          <div className="text-center md:text-left">
+            <p className="text-xs font-semibold uppercase tracking-wider text-gold">
+              수업 장소
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-white sm:text-base">
+              {BRAND.location}
+            </p>
+          </div>
         </div>
       </div>
       <p className="border-t border-white/5 py-6 text-center text-xs text-slate-500 sm:py-8 sm:text-sm">
-        © 2024 Scientific Language Academy. All rights reserved.
+        © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
       </p>
     </footer>
   );

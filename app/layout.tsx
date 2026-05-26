@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { BRAND } from "./content/britannica";
 
 export const metadata: Metadata = {
-  title: "Scientific Language Academy",
-  description: "We teach the logic of language — not just English.",
+  title: `${BRAND.name} | ${BRAND.tagline}`,
+  description:
+    "목동 이편한세상 단지 내 영어 소그룹 수업. 미국 언어학 학·석사 기반 초등·프렙·입시 영어.",
 };
 
-/* 모바일: viewport 고정(반응형 베이스) */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -19,8 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      {/* className: globals.css의 Pretendard + Tailwind font-sans 연동 */}
+    <html lang="ko" className="scroll-smooth">
       <body className="min-h-dvh font-sans antialiased">{children}</body>
     </html>
   );
