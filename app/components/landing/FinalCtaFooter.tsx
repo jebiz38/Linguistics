@@ -20,30 +20,7 @@ export function FinalCtaFooter() {
           {BRAND.phone}
         </a>
       </div>
-      <div className="border-t border-white/10">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:gap-8 md:py-16 lg:px-8">
-          <div className="text-center md:text-right">
-            <p className="text-xs font-semibold uppercase tracking-wider text-gold">
-              전화
-            </p>
-            <a
-              href={BRAND.phoneHref}
-              className="mt-2 block text-lg font-semibold text-white hover:text-gold"
-            >
-              {BRAND.phone}
-            </a>
-          </div>
-          <div className="text-center md:text-left">
-            <p className="text-xs font-semibold uppercase tracking-wider text-gold">
-              수업 장소
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-white sm:text-base">
-              {BRAND.location}
-            </p>
-          </div>
-        </div>
-      </div>
-      <p className="border-t border-white/5 py-6 text-center text-xs text-slate-500 sm:py-8 sm:text-sm">
+      <p className="border-t border-white/10 py-6 text-center text-xs text-slate-500 sm:py-8 sm:text-sm">
         © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
       </p>
     </footer>
