@@ -8,19 +8,45 @@ const AREA_ICONS: LucideIcon[] = [SpellCheck, BookOpen, PenLine, Headphones];
 function ProgramCard({
   grades,
   title,
+  youtubeUrl,
   children,
 }: {
   grades: string;
   title: string;
+  youtubeUrl?: string;
   children: ReactNode;
 }) {
-  return (
+  const card = (
     <article className="rounded-2xl border border-slate-100 bg-white p-6 shadow-md shadow-slate-900/5 sm:p-8">
-      <p className="text-xs font-semibold uppercase tracking-wider text-gold">{grades}</p>
-      <h3 className="mt-2 text-xl font-bold text-navy sm:text-2xl">{title}</h3>
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gold">{grades}</p>
+          <h3 className="mt-2 text-xl font-bold text-navy sm:text-2xl">{title}</h3>
+        </div>
+        {youtubeUrl && (
+          <span className="mt-1 inline-flex shrink-0 items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-600">
+            ▶ 수업 영상 보기
+          </span>
+        )}
+      </div>
       <div className="mt-5">{children}</div>
     </article>
   );
+
+  if (youtubeUrl) {
+    return (
+      <a
+        href={youtubeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block transition-transform hover:scale-[1.01] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+      >
+        {card}
+      </a>
+    );
+  }
+
+  return card;
 }
 
 export function LearningPathways() {
@@ -40,7 +66,7 @@ export function LearningPathways() {
 
         <div className="mt-12 space-y-10 sm:mt-14 sm:space-y-12">
           {/* 초1 ~ 초3 */}
-          <ProgramCard grades={ELEMENTARY.grades} title={ELEMENTARY.title}>
+          <ProgramCard grades={ELEMENTARY.grades} title={ELEMENTARY.title} youtubeUrl={ELEMENTARY.youtubeUrl}>
             <p className="text-pretty text-sm leading-relaxed text-slate-600 sm:text-[15px]">
               {ELEMENTARY.intro}
             </p>

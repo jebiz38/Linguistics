@@ -18,6 +18,8 @@ export const HERO = {
 export const ELEMENTARY = {
   title: "초등 영어",
   grades: "초1 ~ 초3",
+  youtubeUrl:
+    "https://www.youtube.com/watch?v=0XyLnHa0gFM&list=PLx_kgXuOGG800oJ6XWbJDUYST1nuS53JE",
   intro: "영어 4대 영역 집중 훈련 — Listening/Speaking, Reading, Writing, Grammar",
   areas: [
     {
