@@ -5,7 +5,7 @@ import { BRAND } from "./content/britannica";
 export const metadata: Metadata = {
   title: `${BRAND.name} | ${BRAND.tagline}`,
   description:
-    "목동 이편한세상 단지 내 영어 소그룹 수업. 미국 언어학 학·석사 기반 초등·프렙·입시 영어.",
+    "이편한세상동탄 단지 내 영어 소그룹 수업. 미국 언어학 학·석사 기반 초등·프렙·입시 영어.",
 };
 
 export const viewport: Viewport = {

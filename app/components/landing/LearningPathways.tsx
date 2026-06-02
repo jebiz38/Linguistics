@@ -4,9 +4,9 @@ import { useState, useEffect, useCallback } from "react";
 import type { ReactNode } from "react";
 import { BookOpen, Headphones, PenLine, SpellCheck, X } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { ELEMENTARY, PROGRAMS } from "@/app/content/britannica";
+import { ELEMENTARY, PROGRAMS, PROGRAMS_INTRO } from "@/app/content/britannica";
 
-const AREA_ICONS: LucideIcon[] = [SpellCheck, BookOpen, PenLine, Headphones];
+const AREA_ICONS: LucideIcon[] = [SpellCheck, Headphones, PenLine, BookOpen];
 
 function toEmbedUrl(watchUrl: string): string {
   const url = new URL(watchUrl);
@@ -113,9 +113,12 @@ export function LearningPathways() {
         >
           수업 프로그램
         </h2>
+        <p className="mx-auto mt-6 max-w-3xl text-pretty text-center text-sm leading-relaxed text-slate-600 sm:text-[15px]">
+          {PROGRAMS_INTRO}
+        </p>
 
         <div className="mt-12 space-y-10 sm:mt-14 sm:space-y-12">
-          {/* 초1 ~ 초3 */}
+          {/* 초1 ~ 초6 */}
           <ProgramCard
             grades={ELEMENTARY.grades}
             title={ELEMENTARY.title}
