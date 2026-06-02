@@ -85,10 +85,10 @@ function ProgramCard({
         </div>
         {onVideoClick && (
           <button
-            onClick={onVideoClick}
-            className="mt-1 inline-flex shrink-0 items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-600 transition-colors hover:bg-red-100"
+            disabled
+            className="mt-1 inline-flex shrink-0 cursor-not-allowed items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-400"
           >
-            ▶ 수업 영상 보기
+            ▶ 수업 영상 준비 중
           </button>
         )}
       </div>
