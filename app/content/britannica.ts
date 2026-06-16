@@ -21,16 +21,24 @@ export const PROGRAMS_INTRO =
 export const CLASS_VIDEOS = {
   title: "수업 영상",
   intro: "실제 수업 영상을 미리 확인해 보세요. 썸네일을 클릭하면 재생됩니다.",
-  videos: [
+  groups: [
     {
-      id: "class-video-1",
-      title: "수업 영상 1",
-      youtubeUrl: "https://youtu.be/lF5BzmSQfak",
+      id: "individual-presentations",
+      title: "Individual Presentations",
+      videos: [
+        { id: "individual-1", youtubeUrl: "https://youtu.be/yT8M4IMoYr4" },
+        { id: "individual-2", youtubeUrl: "https://youtu.be/lF5BzmSQfak" },
+        { id: "individual-3", youtubeUrl: "https://youtu.be/aieCY9HQGsA" },
+        { id: "individual-4", youtubeUrl: "https://youtu.be/5pmAyc5a0hQ" },
+      ],
     },
     {
-      id: "class-video-2",
-      title: "수업 영상 2",
-      youtubeUrl: "https://youtu.be/yT8M4IMoYr4",
+      id: "pair-presentations",
+      title: "Pair Presentations",
+      videos: [
+        { id: "pair-1", youtubeUrl: "https://youtu.be/6XtqDaHEn2A" },
+        { id: "pair-2", youtubeUrl: "https://youtu.be/XOEo4rVwqqM" },
+      ],
     },
   ],
 } as const;
