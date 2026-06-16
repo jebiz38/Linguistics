@@ -74,11 +74,13 @@ export function ClassVideos() {
         >
           {CLASS_VIDEOS.title}
         </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-pretty rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-center text-sm leading-relaxed text-slate-700 sm:text-[15px]">
-          {CLASS_VIDEOS.philosophy.body}
-          <strong className="font-bold text-navy">{CLASS_VIDEOS.philosophy.emphasis}</strong>
-          {CLASS_VIDEOS.philosophy.closing}
-        </p>
+        <div className="mx-auto mt-6 max-w-3xl space-y-3 rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-center text-sm leading-relaxed text-slate-700 sm:text-[15px]">
+          <p className="text-pretty">{CLASS_VIDEOS.philosophy.lead}</p>
+          <p className="text-pretty">{CLASS_VIDEOS.philosophy.warning}</p>
+          <p className="text-pretty">
+            <strong className="font-bold text-navy">{CLASS_VIDEOS.philosophy.emphasis}</strong>
+          </p>
+        </div>
         <p className="mx-auto mt-5 max-w-3xl text-pretty text-center text-sm leading-relaxed text-slate-600 sm:text-[15px]">
           {CLASS_VIDEOS.intro}
         </p>
