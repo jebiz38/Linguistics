@@ -66,7 +66,7 @@ export function HeroSection() {
           href="#class-videos"
           className="mt-10 block text-base font-semibold text-gold underline-offset-4 hover:underline sm:mt-12 sm:text-lg"
         >
-          수업 영상 보기
+          말하기 수업 보기
         </Link>
         <div className="mt-10 flex flex-col items-center sm:mt-12" aria-hidden>
           <span className="h-12 w-px bg-white/50 sm:h-16" />

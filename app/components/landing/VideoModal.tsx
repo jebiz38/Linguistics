@@ -40,7 +40,7 @@ export function VideoModal({ embedUrl, onClose }: { embedUrl: string; onClose: (
         <div className="aspect-video w-full overflow-hidden rounded-2xl shadow-2xl">
           <iframe
             src={embedUrl}
-            title="수업 영상"
+            title="말하기 수업"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="h-full w-full"

@@ -19,8 +19,9 @@ export const PROGRAMS_INTRO =
   "기능적인 패턴별 학습이 아닌, 리딩을 통해 사고하고 쓰고 토론·발표 수업이 이어지는 수업에 참여할 수 있습니다.";
 
 export const CLASS_VIDEOS = {
-  title: "수업 영상",
-  intro: "실제 수업 영상을 미리 확인해 보세요. 썸네일을 클릭하면 재생됩니다.",
+  title: "말하기 수업",
+  intro:
+    "실제 수업에서 학생들이 영어로 발표하는 모습을 확인해 보세요. 썸네일을 클릭하면 재생됩니다.",
   groups: [
     {
       id: "individual-presentations",
