@@ -75,7 +75,11 @@ export function ClassVideos() {
           {CLASS_VIDEOS.title}
         </h2>
         <div className="mx-auto mt-6 max-w-3xl space-y-3 rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-center text-sm leading-relaxed text-slate-700 sm:text-[15px]">
-          <p className="text-pretty">{CLASS_VIDEOS.philosophy.lead}</p>
+          {CLASS_VIDEOS.philosophy.lead.map((paragraph) => (
+            <p key={paragraph} className="text-pretty">
+              {paragraph}
+            </p>
+          ))}
           <p className="text-pretty">{CLASS_VIDEOS.philosophy.warning}</p>
           <p className="text-pretty">
             <strong className="font-bold text-navy">{CLASS_VIDEOS.philosophy.emphasis}</strong>
