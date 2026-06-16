@@ -18,11 +18,26 @@ export const HERO = {
 export const PROGRAMS_INTRO =
   "기능적인 패턴별 학습이 아닌, 리딩을 통해 사고하고 쓰고 토론·발표 수업이 이어지는 수업에 참여할 수 있습니다.";
 
+export const CLASS_VIDEOS = {
+  title: "수업 영상",
+  intro: "실제 수업 영상을 미리 확인해 보세요. 썸네일을 클릭하면 재생됩니다.",
+  videos: [
+    {
+      id: "class-video-1",
+      title: "수업 영상 1",
+      youtubeUrl: "https://youtu.be/lF5BzmSQfak",
+    },
+    {
+      id: "class-video-2",
+      title: "수업 영상 2",
+      youtubeUrl: "https://youtu.be/yT8M4IMoYr4",
+    },
+  ],
+} as const;
+
 export const ELEMENTARY = {
   title: "초등 영어",
   grades: "초1 ~ 초6",
-  youtubeUrl:
-    "https://www.youtube.com/watch?v=0XyLnHa0gFM&list=PLx_kgXuOGG800oJ6XWbJDUYST1nuS53JE",
   intro:
     "영어 4대 영역 집중 지도 — Listening, Speaking, Reading, Writing + Grammar",
   areas: [
