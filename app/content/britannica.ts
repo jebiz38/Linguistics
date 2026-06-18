@@ -18,6 +18,47 @@ export const HERO = {
 export const PROGRAMS_INTRO =
   "기능적인 패턴별 학습이 아닌, 리딩을 통해 사고하고 쓰고 토론·발표 수업이 이어지는 수업에 참여할 수 있습니다.";
 
+export const INTRODUCTION = {
+  eyebrow: "3~4인 소규모 정예, 모국어 습득 방식으로 시작하는 영어의 첫걸음",
+  paragraphs: [
+    "Britannica English는 영어의 첫 발을 내딛는 아이들을 위해 외우는 '외국어'가 아닌, 자연스럽게 스며드는 '모국어 습득 방식'으로 지도합니다.",
+    "소리의 가장 작은 단위인 음소를 인지하는 것부터 시작해 듣기와 발화를 먼저 깨우칩니다. 자연스러운 구어체(Spoken Language)가 형성되면, 문어체(Written Language)를 통해 읽기와 쓰기로 이어지는 자연스러운 언어 발달 단계를 지향합니다.",
+  ],
+  roadmapTitle: "Britannica English의 체계적인 3단계 로드맵",
+  roadmapSteps: [
+    {
+      step: 1,
+      title: "Phonics & 원서 읽기 독립",
+      grades: "초등 저~고학년 전",
+      points: [
+        "파닉스 이후 스스로 읽는 '읽기 독립'을 시작합니다.",
+        "Scholastic, Usborne, Oxford University Press 등 세계적인 출판사의 Fiction(문학 원서) 동화와 소설을 읽으며 풍부한 어휘력과 표현력을 확장합니다.",
+      ],
+    },
+    {
+      step: 2,
+      title: "Non-fiction 지문 및 배경지식 확장",
+      points: [
+        "학습자의 레벨에 맞춘 국내 우수 교재부터, 세계적인 Encyclopedia Britannica, Inc.의 온라인 플랫폼 지문까지 폭넓게 활용합니다.",
+        "Science, History, Economy, Astronomy, Geography, Fine Art 등 다양한 분야의 지문을 통해 깊이 있는 배경지식을 쌓습니다.",
+      ],
+    },
+    {
+      step: 3,
+      title: "4대 영역 통합 및 Output 훈련",
+      points: [
+        "심층적인 리딩(Input)에 머무르지 않고, 이를 바탕으로 한 프리젠테이션과 토론 수업(Output)을 진행합니다.",
+        "Reading - Speaking - Listening - Writing이 유기적으로 연결되어, 리딩 수업이 곧 깊이 있는 말하기와 발표 수업으로 이어집니다.",
+      ],
+    },
+  ],
+  britannicaTitle: "왜 브리태니카(Britannica)일까요?",
+  britannicaParagraphs: [
+    "1768년 스코틀랜드에서 설립되어 250년이 넘는 역사를 지닌 Encyclopedia Britannica, Inc.는 세계에서 가장 권위 있는 백과사전 출판사입니다. 각 분야의 최고 교수와 연구자, 전문가들이 집필한 신뢰도 높은 콘텐츠를 자랑하며, 현재는 시대의 흐름에 맞춰 세계적인 온라인 교육 플랫폼으로 거듭났습니다.",
+    "Britannica English는 이 검증된 플랫폼을 활용하여 향후 입시를 위한 탄탄한 영어 문해력을 갖추도록 훈련합니다. 단지 눈으로 읽고 문제를 푸는 주입식 학습에서 벗어나, 세상을 바라보는 시야를 넓히고 진짜 실력을 키우는 가장 효과적인 영어 읽기를 지도합니다.",
+  ],
+} as const;
+
 export const CLASS_VIDEOS = {
   title: "말하기 수업",
   philosophy: {
@@ -39,6 +80,10 @@ export const CLASS_VIDEOS = {
         { id: "individual-2", youtubeUrl: "https://youtu.be/lF5BzmSQfak" },
         { id: "individual-3", youtubeUrl: "https://youtu.be/aieCY9HQGsA" },
         { id: "individual-4", youtubeUrl: "https://youtu.be/5pmAyc5a0hQ" },
+        { id: "individual-5", youtubeUrl: "https://youtu.be/G0JVhJ9A3lc" },
+        { id: "individual-6", youtubeUrl: "https://youtu.be/W-eqmC9BGAQ" },
+        { id: "individual-7", youtubeUrl: "https://youtu.be/mO_-LDH3-Ak" },
+        { id: "individual-8", youtubeUrl: "https://youtu.be/m9_0xbAThvc" },
       ],
     },
     {

@@ -1,4 +1,5 @@
 import { HeroSection } from "./components/landing/HeroSection";
+import { AcademyIntroduction } from "./components/landing/AcademyIntroduction";
 import { AcademicCredentials } from "./components/landing/AcademicCredentials";
 import { LearningPathways } from "./components/landing/LearningPathways";
 import { ClassVideos } from "./components/landing/ClassVideos";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <AcademyIntroduction />
       <AcademicCredentials />
       <LearningPathways />
       <ClassVideos />
