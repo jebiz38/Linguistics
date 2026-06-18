@@ -13,7 +13,7 @@ export function AcademyIntroduction() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold sm:text-sm">
+          <p className="text-base font-bold leading-snug text-gold sm:text-lg md:text-xl">
             {INTRODUCTION.eyebrow}
           </p>
           <h2
